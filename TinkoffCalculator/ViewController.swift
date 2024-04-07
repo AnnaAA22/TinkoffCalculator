@@ -52,10 +52,12 @@ class ViewController: UIViewController {
             return
         }
 
-        if (label.text == "0" || label.text == "Ошибка") && buttonText != "," {
-            label.text = buttonText
-        } else if (label.text == "0" || label.text == "Ошибка") && buttonText == "," {
-            label.text = "0" + buttonText
+        if label.text == "0" || label.text == "Ошибка" {
+            if buttonText == "," {
+                label.text = "0,"
+            } else {
+                label.text = buttonText
+            }
         } else {
             label.text?.append(buttonText)
         }
