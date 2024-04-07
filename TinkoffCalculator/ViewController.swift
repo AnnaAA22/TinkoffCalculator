@@ -43,6 +43,8 @@ enum CalculationHistoryItem {
     case operation(Operation)
 }
 
+var calculationIsDone = false;
+
 class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -52,12 +54,13 @@ class ViewController: UIViewController {
             return
         }
 
-        if label.text == "0" || label.text == "Ошибка" {
+        if label.text == "0" || label.text == "Ошибка" || calculationIsDone {
             if buttonText == "," {
                 label.text = "0,"
             } else {
                 label.text = buttonText
             }
+            calculationIsDone = false
         } else {
             label.text?.append(buttonText)
         }
@@ -102,6 +105,7 @@ class ViewController: UIViewController {
             label.text = "Ошибка"
         }
         
+        calculationIsDone = true
         calculationHistory.removeAll()
     }
     
@@ -146,6 +150,5 @@ class ViewController: UIViewController {
     func resetLabelText() {
         label.text = "0"
     }
-
 }
 
