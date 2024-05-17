@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="TinkoffCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="calculationLabel" destination="idZ-5Y-OVd" id="eqc-Ex-GQq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idZ-5Y-OVd" userLabel="Calculation Label">
+                    <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3v4-zP-FMq">
+                    <rect key="frame" x="151.33333333333334" y="547.33333333333337" width="90.666666666666657" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Закрыть"/>
+                    <connections>
+                        <action selector="pop:" destination="-1" eventType="touchUpInside" id="2Er-nx-lC0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuS-FZ-oIb">
+                    <rect key="frame" x="154.66666666666666" y="274.33333333333331" width="84" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray2Color"/>
+            <constraints>
+                <constraint firstItem="3v4-zP-FMq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8zJ-Gl-9A4"/>
+                <constraint firstItem="idZ-5Y-OVd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Upp-Jf-STC"/>
+                <constraint firstItem="idZ-5Y-OVd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Wkr-ss-mZg"/>
+                <constraint firstItem="idZ-5Y-OVd" firstAttribute="top" secondItem="PuS-FZ-oIb" secondAttribute="bottom" constant="130.66666666666669" id="e8t-NP-sV5"/>
+                <constraint firstItem="3v4-zP-FMq" firstAttribute="top" secondItem="idZ-5Y-OVd" secondAttribute="bottom" constant="121.33333333333331" id="g33-k5-A62"/>
+                <constraint firstItem="PuS-FZ-oIb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lGw-ke-HDd"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

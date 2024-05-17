@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  FirstViewController.swift
 //  TinkoffCalculator
 //
-//  Created by Анна Алёшина on 28.03.2024.
+//  Created by Анна Алёшина on 14.05.2024.
 //
 
 import UIKit
@@ -44,8 +44,9 @@ enum CalculationHistoryItem {
 }
 
 var calculationIsDone = false;
+var lastCalculation = "NoData";
 
-class ViewController: UIViewController {
+class FirstViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else { return }
@@ -99,8 +100,9 @@ class ViewController: UIViewController {
         
         do {
             let result = try calculate()
-            
+            let bufferLastCalculation = lastCalculation
             label.text = numberFormatter.string(from: NSNumber(value: result))
+            lastCalculation = label.text ?? bufferLastCalculation
         } catch {
             label.text = "Ошибка"
         }
@@ -130,6 +132,13 @@ class ViewController: UIViewController {
         resetLabelText()
     }
     
+    @IBAction func showCalculationsList(_ sender: Any) {
+        let secondVC = SecondViewController()
+        secondVC.title = "Прошлые вычисления"
+        secondVC.result = lastCalculation
+        navigationController?.pushViewController(secondVC, animated: true)
+    }
+    
     func calculate() throws -> Double {
         guard case .number(let firstNumber) = calculationHistory[0] else { return 0}
         
@@ -151,4 +160,5 @@ class ViewController: UIViewController {
         label.text = "0"
     }
 }
+
 
