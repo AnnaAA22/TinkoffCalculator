@@ -18,6 +18,25 @@
 		BB8385312BF2BC0D009265A2 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB83852F2BF2BC0D009265A2 /* FirstViewController.xib */; };
 		BB8385342BF808F7009265A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8385322BF808F7009265A2 /* SecondViewController.swift */; };
 		BB8385352BF808F7009265A2 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8385332BF808F7009265A2 /* SecondViewController.xib */; };
+		BB8385362BF82029009265A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */; };
+		BB8385372BF8202C009265A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */; };
+		BB8385382BF82031009265A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */; };
+		BB8385392BF82032009265A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */; };
+		BB83853A2BF82035009265A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8385322BF808F7009265A2 /* SecondViewController.swift */; };
+		BB83853B2BF82035009265A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8385322BF808F7009265A2 /* SecondViewController.swift */; };
+		BB83853C2BF8203A009265A2 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8385332BF808F7009265A2 /* SecondViewController.xib */; };
+		BB83853D2BF8203A009265A2 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB8385332BF808F7009265A2 /* SecondViewController.xib */; };
+		BB83853E2BF8203E009265A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D22BB4BBD5009265A2 /* Assets.xcassets */; };
+		BB83853F2BF8203F009265A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D22BB4BBD5009265A2 /* Assets.xcassets */; };
+		BB8385402BF82042009265A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D42BB4BBD5009265A2 /* LaunchScreen.storyboard */; };
+		BB8385412BF82043009265A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D42BB4BBD5009265A2 /* LaunchScreen.storyboard */; };
+		BB8385422BF82047009265A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D72BB4BBD5009265A2 /* Info.plist */; };
+		BB8385432BF82048009265A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D72BB4BBD5009265A2 /* Info.plist */; };
+		BB8385442BF82048009265A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB8384D72BB4BBD5009265A2 /* Info.plist */; };
+		BB8385452BF8204C009265A2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83852E2BF2BC0D009265A2 /* FirstViewController.swift */; };
+		BB8385462BF8204D009265A2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83852E2BF2BC0D009265A2 /* FirstViewController.swift */; };
+		BB8385472BF82050009265A2 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB83852F2BF2BC0D009265A2 /* FirstViewController.xib */; };
+		BB8385482BF82051009265A2 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB83852F2BF2BC0D009265A2 /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +259,7 @@
 				BB8385352BF808F7009265A2 /* SecondViewController.xib in Resources */,
 				BB8384D62BB4BBD5009265A2 /* LaunchScreen.storyboard in Resources */,
 				BB8384D32BB4BBD5009265A2 /* Assets.xcassets in Resources */,
+				BB8385422BF82047009265A2 /* Info.plist in Resources */,
 				BB8385312BF2BC0D009265A2 /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +268,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8385432BF82048009265A2 /* Info.plist in Resources */,
+				BB8385472BF82050009265A2 /* FirstViewController.xib in Resources */,
+				BB8385402BF82042009265A2 /* LaunchScreen.storyboard in Resources */,
+				BB83853E2BF8203E009265A2 /* Assets.xcassets in Resources */,
+				BB83853C2BF8203A009265A2 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8385442BF82048009265A2 /* Info.plist in Resources */,
+				BB8385482BF82051009265A2 /* FirstViewController.xib in Resources */,
+				BB8385412BF82043009265A2 /* LaunchScreen.storyboard in Resources */,
+				BB83853F2BF8203F009265A2 /* Assets.xcassets in Resources */,
+				BB83853D2BF8203A009265A2 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +306,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8385452BF8204C009265A2 /* FirstViewController.swift in Sources */,
+				BB83853A2BF82035009265A2 /* SecondViewController.swift in Sources */,
+				BB8385362BF82029009265A2 /* AppDelegate.swift in Sources */,
 				BB8384E12BB4BBD5009265A2 /* TinkoffCalculatorTests.swift in Sources */,
+				BB8385382BF82031009265A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8385372BF8202C009265A2 /* AppDelegate.swift in Sources */,
 				BB8384ED2BB4BBD5009265A2 /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */,
 				BB8384EB2BB4BBD5009265A2 /* TinkoffCalculatorUITests.swift in Sources */,
+				BB8385462BF8204D009265A2 /* FirstViewController.swift in Sources */,
+				BB83853B2BF82035009265A2 /* SecondViewController.swift in Sources */,
+				BB8385392BF82032009265A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
