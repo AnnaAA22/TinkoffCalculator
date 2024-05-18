@@ -100,11 +100,11 @@ class FirstViewController: UIViewController {
         
         do {
             let result = try calculate()
-            let bufferLastCalculation = lastCalculation
             label.text = numberFormatter.string(from: NSNumber(value: result))
-            lastCalculation = label.text ?? bufferLastCalculation
+            lastCalculation = label.text ?? "NoData"
         } catch {
             label.text = "Ошибка"
+            lastCalculation = "NoData"
         }
         
         calculationIsDone = true
