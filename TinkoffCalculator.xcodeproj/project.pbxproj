@@ -16,6 +16,9 @@
 		BB8384E12BB4BBD5009265A2 /* TinkoffCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384E02BB4BBD5009265A2 /* TinkoffCalculatorTests.swift */; };
 		BB8384EB2BB4BBD5009265A2 /* TinkoffCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384EA2BB4BBD5009265A2 /* TinkoffCalculatorUITests.swift */; };
 		BB8384ED2BB4BBD5009265A2 /* TinkoffCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384EC2BB4BBD5009265A2 /* TinkoffCalculatorUITestsLaunchTests.swift */; };
+		BB8385052BC4AA9E009265A2 /* CalculationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8385042BC4AA9E009265A2 /* CalculationsListViewController.swift */; };
+		BB83854B2C1E46DC009265A2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83854A2C1E46DC009265A2 /* HistoryTableViewCell.swift */; };
+		BB83854D2C1E482A009265A2 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB83854C2C1E482A009265A2 /* HistoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		BB8384E62BB4BBD5009265A2 /* TinkoffCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8384EA2BB4BBD5009265A2 /* TinkoffCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITests.swift; sourceTree = "<group>"; };
 		BB8384EC2BB4BBD5009265A2 /* TinkoffCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB8385042BC4AA9E009265A2 /* CalculationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListViewController.swift; sourceTree = "<group>"; };
+		BB83854A2C1E46DC009265A2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		BB83854C2C1E482A009265A2 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		BB8384C82BB4BBD4009265A2 /* TinkoffCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				BB8385492C1E45EF009265A2 /* History */,
 				BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */,
 				BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */,
 				BB8384CD2BB4BBD4009265A2 /* ViewController.swift */,
@@ -125,6 +132,16 @@
 				BB8384EC2BB4BBD5009265A2 /* TinkoffCalculatorUITestsLaunchTests.swift */,
 			);
 			path = TinkoffCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		BB8385492C1E45EF009265A2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				BB8385042BC4AA9E009265A2 /* CalculationsListViewController.swift */,
+				BB83854A2C1E46DC009265A2 /* HistoryTableViewCell.swift */,
+				BB83854C2C1E482A009265A2 /* HistoryTableViewCell.xib */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +250,7 @@
 			files = (
 				BB8384D62BB4BBD5009265A2 /* LaunchScreen.storyboard in Resources */,
 				BB8384D32BB4BBD5009265A2 /* Assets.xcassets in Resources */,
+				BB83854D2C1E482A009265A2 /* HistoryTableViewCell.xib in Resources */,
 				BB8384D12BB4BBD4009265A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8385052BC4AA9E009265A2 /* CalculationsListViewController.swift in Sources */,
 				BB8384CE2BB4BBD4009265A2 /* ViewController.swift in Sources */,
 				BB8384CA2BB4BBD4009265A2 /* AppDelegate.swift in Sources */,
 				BB8384CC2BB4BBD4009265A2 /* SceneDelegate.swift in Sources */,
+				BB83854B2C1E46DC009265A2 /* HistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
