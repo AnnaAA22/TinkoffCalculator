@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB518BFB2C4BC12F00FA3A37 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB518BFA2C4BC12F00FA3A37 /* Storage.swift */; };
 		BB8384CA2BB4BBD4009265A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */; };
 		BB8384CC2BB4BBD4009265A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */; };
 		BB8384CE2BB4BBD4009265A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384CD2BB4BBD4009265A2 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB518BFA2C4BC12F00FA3A37 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		BB8384C62BB4BBD4009265A2 /* TinkoffCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB518BF92C4BBFBB00FA3A37 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				BB518BFA2C4BC12F00FA3A37 /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		BB8384BD2BB4BBD4009265A2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		BB8384C82BB4BBD4009265A2 /* TinkoffCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				BB518BF92C4BBFBB00FA3A37 /* Storage */,
 				BB8385492C1E45EF009265A2 /* History */,
 				BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */,
 				BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */,
@@ -281,6 +292,7 @@
 				BB8384CA2BB4BBD4009265A2 /* AppDelegate.swift in Sources */,
 				BB8384CC2BB4BBD4009265A2 /* SceneDelegate.swift in Sources */,
 				BB83854B2C1E46DC009265A2 /* HistoryTableViewCell.swift in Sources */,
+				BB518BFB2C4BC12F00FA3A37 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

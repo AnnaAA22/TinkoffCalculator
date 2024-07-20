@@ -101,7 +101,10 @@ class ViewController: UIViewController {
             let result = try calculate()
             
             label.text = numberFormatter.string(from: NSNumber(value: result))
-            calculations.append((calculationHistory, result))
+            let currentDate = Date()
+            let newCalculation = Calculation(expression: calculationHistory, result: result, date: currentDate)
+            calculations.append(newCalculation)
+            calculationHistoryStorage.setHistory(calculation: calculations)
         } catch {
             label.text = "Ошибка"
         }
@@ -114,7 +117,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var historyButton: UIButton!
     
     var calculationHistory: [CalculationHistoryItem] = []
-    var calculations: [(expression: [CalculationHistoryItem], result: Double)] = []
+    var calculations: [Calculation] = []
+    
+    let calculationHistoryStorage = CalculationHistoryStorage()
     
     lazy var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
@@ -131,10 +136,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         resetLabelText()
+        calculations = calculationHistoryStorage.loadHistory()
         historyButton.accessibilityIdentifier = "historyButton"
     }
     
-    override func viewWillAppear(_ animated: Bool) {//viewDidAppear
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
