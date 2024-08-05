@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BB518BFB2C4BC12F00FA3A37 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB518BFA2C4BC12F00FA3A37 /* Storage.swift */; };
+		BB518BFD2C555B5C00FA3A37 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB518BFC2C555B5C00FA3A37 /* AlertView.swift */; };
+		BB7D4E532C6157ED000519FC /* LongPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7D4E522C6157ED000519FC /* LongPressView.swift */; };
 		BB8384CA2BB4BBD4009265A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */; };
 		BB8384CC2BB4BBD4009265A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */; };
 		BB8384CE2BB4BBD4009265A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8384CD2BB4BBD4009265A2 /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		BB518BFA2C4BC12F00FA3A37 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BB518BFC2C555B5C00FA3A37 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		BB7D4E522C6157ED000519FC /* LongPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressView.swift; sourceTree = "<group>"; };
 		BB8384C62BB4BBD4009265A2 /* TinkoffCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8384C92BB4BBD4009265A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB8384CB2BB4BBD4009265A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				BB8384D22BB4BBD5009265A2 /* Assets.xcassets */,
 				BB8384D42BB4BBD5009265A2 /* LaunchScreen.storyboard */,
 				BB8384D72BB4BBD5009265A2 /* Info.plist */,
+				BB518BFC2C555B5C00FA3A37 /* AlertView.swift */,
+				BB7D4E522C6157ED000519FC /* LongPressView.swift */,
 			);
 			path = TinkoffCalculator;
 			sourceTree = "<group>";
@@ -289,9 +295,11 @@
 			files = (
 				BB8385052BC4AA9E009265A2 /* CalculationsListViewController.swift in Sources */,
 				BB8384CE2BB4BBD4009265A2 /* ViewController.swift in Sources */,
+				BB518BFD2C555B5C00FA3A37 /* AlertView.swift in Sources */,
 				BB8384CA2BB4BBD4009265A2 /* AppDelegate.swift in Sources */,
 				BB8384CC2BB4BBD4009265A2 /* SceneDelegate.swift in Sources */,
 				BB83854B2C1E46DC009265A2 /* HistoryTableViewCell.swift in Sources */,
+				BB7D4E532C6157ED000519FC /* LongPressView.swift in Sources */,
 				BB518BFB2C4BC12F00FA3A37 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

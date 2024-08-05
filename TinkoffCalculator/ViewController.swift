@@ -45,7 +45,7 @@ enum CalculationHistoryItem {
 
 var calculationIsDone = false;
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         guard let buttonText = sender.currentTitle else { return }
@@ -64,6 +64,12 @@ class ViewController: UIViewController {
         } else {
             label.text?.append(buttonText)
         }
+        
+        if label.text == "3,141592" {
+            animateAlert()
+        }
+        
+        sender.animateTap()
     }
     
     @IBAction func operationButtonPressed(_ sender: UIButton) {
@@ -107,10 +113,12 @@ class ViewController: UIViewController {
             calculationHistoryStorage.setHistory(calculation: calculations)
         } catch {
             label.text = "Ошибка"
+            label.shake()
         }
         
         calculationIsDone = true
         calculationHistory.removeAll()
+        animateBackground()
     }
     
     @IBOutlet weak var label: UILabel!
@@ -120,6 +128,28 @@ class ViewController: UIViewController {
     var calculations: [Calculation] = []
     
     let calculationHistoryStorage = CalculationHistoryStorage()
+    
+    private let alertView: AlertView = {
+        let screenBounds = UIScreen.main.bounds
+        let alertHeight: CGFloat = 100
+        let alertWidth: CGFloat = screenBounds.width - 40
+        let x: CGFloat = screenBounds.width / 2 - alertWidth / 2
+        let y: CGFloat = screenBounds.height / 2 - alertHeight / 2
+        let alertFrame = CGRect(x: x, y: y, width: alertWidth, height: alertHeight)
+        let alertView = AlertView(frame: alertFrame)
+        return alertView
+    }()
+    
+    private let longPressView: LongPressView = {
+        let screenBounds = UIScreen.main.bounds
+        let pressViewHeight: CGFloat = 80
+        let pressViewWidth: CGFloat = screenBounds.width - 50
+        let x: CGFloat = screenBounds.width / 2 - pressViewWidth / 2
+        let y: CGFloat = screenBounds.height / 2 - pressViewHeight / 2
+        let pressViewFrame = CGRect(x: x, y: y, width: pressViewWidth, height: pressViewHeight)
+        let longPressView = LongPressView(frame: pressViewFrame)
+        return longPressView
+    }()
     
     lazy var numberFormatter: NumberFormatter = {
         let numberFormatter = NumberFormatter()
@@ -138,6 +168,18 @@ class ViewController: UIViewController {
         resetLabelText()
         calculations = calculationHistoryStorage.loadHistory()
         historyButton.accessibilityIdentifier = "historyButton"
+        
+        view.addSubview(alertView)
+        alertView.alpha = 0
+        alertView.alertText = "Вы нашли пасхалку!"
+        
+        view.subviews.forEach {
+            if type(of: $0) == UIButton.self {
+                $0.layer.cornerRadius = 15
+            }
+        }
+        
+        addGestureRecognizer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -174,5 +216,98 @@ class ViewController: UIViewController {
     
     func resetLabelText() {
         label.text = "0"
+    }
+    
+    func animateAlert() {
+        if !view.contains(alertView) {
+            alertView.alpha = 0
+            alertView.center = view.center
+            view.addSubview(alertView)
+        }
+        
+        UIView.animateKeyframes(withDuration: 2.0, delay: 0.5) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
+                self.alertView.alpha = 1
+            }
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
+                var newCenter = self.label.center
+                newCenter.y -= self.alertView.bounds.height
+                self.alertView.center = newCenter
+            }
+        }
+        
+        /*
+        UIView.animate(withDuration: 0.5) {
+            self.alertView.alpha = 1
+        } //completion: { (_) in
+
+        UIView.animate(withDuration: 0.5, delay: 0.5) {
+            var newCenter = self.label.center
+            newCenter.y -= self.alertView.bounds.height
+            self.alertView.center = newCenter
+        }
+        //}
+        */
+    }
+    
+    func animateBackground() {
+        let animation = CABasicAnimation(keyPath: "backgroundColor")
+        animation.duration = 1
+        animation.fromValue = UIColor.white.cgColor
+        animation.toValue = UIColor.blue.cgColor
+        
+        view.layer.add(animation, forKey: "backgroundColor")
+        view.layer.backgroundColor = UIColor.blue.cgColor
+    }
+    
+    func addGestureRecognizer() {
+        view.addSubview(longPressView)
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressAction))
+        longPressGesture.delegate = self
+        self.view.addGestureRecognizer(longPressGesture)
+    }
+    
+    @objc func longPressAction(_ sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == .began {
+            longPressView.startAnimation()
+        }
+        else if sender.state == .ended {
+            longPressView.stopAnimation()
+        }
+    }
+}
+
+extension UILabel {
+    func shake() {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.05
+        animation.repeatCount = 5
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: center.x - 5, y: center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: center.x + 5, y: center.y))
+        
+        layer.add(animation, forKey: "position")
+    }
+}
+
+extension UIButton {
+    
+    func animateTap() {
+        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+        scaleAnimation.values = [1, 0.9, 1]
+        scaleAnimation.keyTimes = [0, 0.2, 1]
+        
+        let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+        scaleAnimation.values = [0.4, 0.8, 1]
+        scaleAnimation.keyTimes = [0, 0.2, 1]
+        
+        let animationGroup = CAAnimationGroup()
+        animationGroup.duration = 1.5
+        animationGroup.animations = [scaleAnimation, opacityAnimation]
+        
+        layer.add(animationGroup, forKey: "groupAnimation")
     }
 }
